@@ -2,5 +2,5 @@
 import './Button.css';
 
 export const Button = ({ text, onClick }) => (
-  <button className="button">{text}</button>
+  <button className="button" onClick= {onClick} >{text}</button>
 );
