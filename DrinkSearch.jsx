@@ -5,6 +5,8 @@ import { TextInput } from './ui/TextInput';
 
 export const DrinkSearch = ({ clickFn }) => {
   const [searchField, setSearchField] = useState('test drink');
+  const handleChange = e => setSearchField(e.target.value);
+  
 
   return (
     <>
