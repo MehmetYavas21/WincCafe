@@ -5,8 +5,9 @@ import { Image , Text, Center} from '@chakra-ui/react';
 
 export const DrinkItem = ({ drink, clickFn }) => {
   return (
-    <Center bg='tomato' h='200px' cursor='pointer' color='white' onClick={() => clickFn(drink)}>
+    <Center bg='tomato' h='200px' cursor='pointer' color='white' direction="column" onClick={() => clickFn(drink)}>
             <Image
+              direction="row"
               boxSize='50px'
               borderRadius='10px'
               objectFit='cover'
