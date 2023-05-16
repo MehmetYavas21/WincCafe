@@ -1,10 +1,22 @@
 import './DrinkItem.css';
+import { Image , Text, Center} from '@chakra-ui/react';
+
+
 
 export const DrinkItem = ({ drink, clickFn }) => {
   return (
-    <button className="drink-item" onClick={() => clickFn(drink)}>
-      <img src={drink.imgUrl} width={50} height={50} alt={drink.alt} />
-      <p>{drink.name}</p>
-    </button>
-  );
+    <Center bg='tomato' h='200px' cursor='pointer' color='white' onClick={() => clickFn(drink)}>
+            <Image
+              boxSize='50px'
+              borderRadius='10px'
+              objectFit='cover'
+              src={drink.imgUrl}
+              alt={drink.alt}
+            />
+        <Text fontSize='lg'  as='samp'>{drink.name}</Text>
+    </Center>     
+    );
 };
+
+
+
